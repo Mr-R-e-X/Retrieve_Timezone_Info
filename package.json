@@ -1,0 +1,14 @@
+{
+  "name": "retrive_timezone_info",
+  "version": "1.0.0",
+  "description": "search user location and search location",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Souvik",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}
