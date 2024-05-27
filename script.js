@@ -25,8 +25,10 @@ async function fetchData(lat, lon) {
     `https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${lon}&format=json&apiKey=5cd148e2ff4e4a3791729195b0fe086c`
   );
   let jsonData = await data.json();
-  //   console.log(jsonData);
+  console.log(jsonData);
   userTimezoneDiv.innerHTML = `
+  <p> ${lat} </p>
+  <p> ${lon} </p>
     <p> ${jsonData.results[0].address_line1} </p>
     <p> ${jsonData.results[0].address_line2} </p>
     <p> ${jsonData.results[0].postcode} </p>

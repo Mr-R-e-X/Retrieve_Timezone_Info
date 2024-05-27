@@ -719,6 +719,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.ml-11 {
+  margin-left: 2.75rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -832,6 +836,11 @@ video {
 
 .w-\[weird-and-invalid\] {
   width: weird-and-invalid;
+}
+
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .min-w-full {
