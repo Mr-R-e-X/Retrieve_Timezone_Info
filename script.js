@@ -1,4 +1,4 @@
-// let userTimezoneDiv = document.querySelector("#user-timezone");
+let userTimezoneDiv = document.querySelector("#user-timezone");
 // let outputDiv = document.querySelector("#search-output");
 
 function getLocation() {
@@ -24,6 +24,12 @@ async function fetchData(lat, lon) {
     `https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${lon}&format=json&apiKey=5cd148e2ff4e4a3791729195b0fe086c`
   );
   let jsonData = await data.json();
-  console.log(jsonData);
+  //   console.log(jsonData);
+  userTimezoneDiv.innerHTML = `
+    <p> ${jsonData.results[0].address_line1} </p>
+    <p> ${jsonData.results[0].address_line2} </p>
+    <p> ${jsonData.results[0].postcode} </p>
+
+  `;
 }
 document.addEventListener("DOMContentLoaded", getLocation);
