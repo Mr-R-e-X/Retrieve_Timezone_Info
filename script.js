@@ -6,6 +6,7 @@ function getLocation() {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
     console.log("No geolocation");
+    window.alert("No geolocation");
   }
 }
 
