@@ -4,9 +4,16 @@ let userLocation = document.querySelector("#user-location");
 let searchOutput = document.querySelector("#search-output");
 function getLocation() {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        showPosition(position);
+      },
+      (error) => {
+        showError("Please Give Permission to Geolocation", userLocation);
+      }
+    );
   } else {
-    showError("Please Give Permission to Geolocation", userLocation);
+    showError("Error in Geolocation", userLocation);
   }
 }
 
