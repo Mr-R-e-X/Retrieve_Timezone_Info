@@ -9,12 +9,50 @@
       href="https://cdn-icons-png.flaticon.com/128/6752/6752813.png"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="min-h-screen min-w-full bg-black text-white">
-    <div id="user-timezone" class="text-white ml-11 w-max"></div>
-    <div id="search-form"></div>
-    <div id="search-output"></div>
+  <body class="min-h-screen min-w-full bg-black text-white scrollbar">
+    <div class="w-full bg-gray-500">
+      <div
+        id="user-location"
+        class="w-full md:w-4/5 lg:w-2/3 xl:w-1/2 mx-auto p-6 text-black"
+      ></div>
+    </div>
+    <div class="container mx-auto">
+      <div
+        id="search-form"
+        class="w-full md:w-4/5 lg:w-2/3 xl:w-1/2 mx-auto px-6 py-2 shadow-lg rounded-lg text-white mt-1"
+      >
+        <h1 class="text-2xl font-bold mb-4 text-gray-300">Enter Address</h1>
+        <form id="address-form" action="#">
+          <div class="mb-4">
+            <input
+              type="text"
+              id="address"
+              class="w-full px-4 py-2 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
+              placeholder="Address"
+            />
+          </div>
+          <div>
+            <input
+              type="submit"
+              id="submit"
+              value="Submit"
+              class="px-6 py-2 bg-white text-black border border-gray-300 rounded-sm hover:bg-gray-100 cursor-pointer"
+            />
+          </div>
+          <div id="error-message" class="mt-2"></div>
+        </form>
+      </div>
+      <div
+        id="search-output"
+        class="w-full md:w-4/5 lg:w-2/3 xl:w-1/2 mx-auto mt-4"
+      ></div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
